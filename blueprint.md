@@ -36,7 +36,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 
 ## Design and Styling
 - **Theme:** Sophisticated, luxurious, and modern dark theme.
-- **Typography:** "Playfair Display" for headings and "Roboto" for body text.
+- **Typography:** Arial, sans-serif.
 - **Visuals:** High-quality images, subtle animations, and a responsive layout.
 - **Color Palette:** A refined color scheme with a gold accent color (`#D4AF37`) for a premium feel.
 - **Texture:** A subtle noise texture on the background to add a tactile feel.
@@ -66,6 +66,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 14. **Mortgage Calculator:** Replaced the "Best Mortgage Rates" ad with a functional mortgage calculator.
 15. **Beautification:** Elevated the application's design to a more sophisticated and visually appealing level.
 16. **Google Analytics:** Added Google Analytics tracking script to all HTML pages.
+17. **Font Change:** Changed the font of the application to Arial.
 
 ## Project Complete
 
