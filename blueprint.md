@@ -67,6 +67,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 15. **Beautification:** Elevated the application's design to a more sophisticated and visually appealing level.
 16. **Google Analytics:** Added Google Analytics tracking script to all HTML pages.
 17. **Font Change:** Changed the font of the application to Arial.
+18. **Image Update:** Updated the property images to a new set of high-quality, AI-generated images.
 
 ## Project Complete
 
