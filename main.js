@@ -13,6 +13,7 @@ class PropertyCard extends HTMLElement {
     render() {
         const projectName = this.getAttribute('project-name');
         const developer = this.getAttribute('developer');
+        const imageUrl = this.getAttribute('image-url');
         const recentTransactions = this.getAttribute('recent-transactions');
         const targetMarket = this.getAttribute('target-market');
 
@@ -20,62 +21,94 @@ class PropertyCard extends HTMLElement {
             <style>
                 :host {
                     display: block;
-                    background-color: var(--secondary-color, #2a2a2a);
+                    background-color: var(--secondary-color, #1D2A3A);
                     border-radius: 8px;
                     overflow: hidden;
-                    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-                    transition: transform 0.3s ease;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+                    border: 1px solid #2a3a4a;
                 }
                 :host(:hover) {
-                    transform: translateY(-5px);
+                    transform: translateY(-10px);
+                    box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+                }
+                .card-image {
+                    width: 100%;
+                    height: 220px;
+                    overflow: hidden;
+                }
+                .card-image img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.4s ease;
+                }
+                :host(:hover) .card-image img {
+                    transform: scale(1.1);
+                    filter: brightness(1.1);
                 }
                 .card-content {
-                    padding: 1.5rem;
+                    padding: 2rem;
                 }
                 h3 {
                     margin: 0;
-                    font-size: 1.5rem;
+                    font-family: var(--heading-font, 'Playfair Display', serif);
+                    font-size: 1.8rem;
                     font-weight: 700;
+                    color: var(--accent-color, #BFA181);
                 }
                 p {
-                    margin: 0.5rem 0;
+                    margin: 0.8rem 0;
                     font-weight: 300;
+                    font-size: 1rem;
                 }
                 .developer {
                     font-weight: 700;
-                     color: var(--accent-color, #f0c419);
+                    color: var(--text-color, #E6F1FF);
                 }
                 .vote-section button {
                     background-color: transparent;
-                    color: var(--text-color, #ffffff);
-                    border: 1px solid var(--accent-color, #f0c419);
-                    padding: 0.5rem 1rem;
+                    color: var(--accent-color, #BFA181);
+                    border: 1px solid var(--accent-color, #BFA181);
+                    padding: 0.7rem 1.2rem;
                     border-radius: 4px;
                     cursor: pointer;
                     margin-right: 0.5rem;
+                    transition: all 0.3s ease;
                 }
 
                 .vote-section button:hover {
-                    background-color: var(--accent-color, #f0c419);
-                    color: var(--primary-color, #1a1a1a);
+                    background-color: var(--accent-color, #BFA181);
+                    color: var(--primary-color, #0A192F);
+                    box-shadow: 0 0 15px var(--accent-color, #BFA181);
                 }
                 .resale-button {
-                    margin-top: 1rem;
-                    background-color: var(--accent-color, #f0c419);
-                    color: var(--primary-color, #1a1a1a);
+                    margin-top: 1.5rem;
+                    background-color: var(--accent-color, #BFA181);
+                    color: var(--primary-color, #0A192F);
                     border: none;
-                    padding: 0.75rem 1.5rem;
+                    padding: 1rem 2rem;
                     border-radius: 4px;
                     cursor: pointer;
                     font-weight: 700;
+                    font-size: 1rem;
+                     transition: all 0.3s ease;
+                }
+                .resale-button:hover {
+                    background-color: #fff;
+                    color: var(--primary-color, #0A192F);
+                    box-shadow: 0 0 20px var(--accent-color, #BFA181);
                 }
                 .chart-container {
                     width: 100%;
                     height: 200px;
-                    margin-top: 1rem;
+                    margin-top: 1.5rem;
                 }
             </style>
             <div class="card">
+                <div class="card-image">
+                    <img src="${imageUrl}" alt="${projectName}">
+                </div>
                 <div class="card-content">
                     <h3>${projectName}</h3>
                     <p class="developer">by ${developer}</p>
@@ -158,72 +191,84 @@ const properties = [
     {
         projectName: "The Continuum",
         developer: "Hoi Hup Realty & Sunway Developments",
+        imageUrl: "https://source.unsplash.com/400x220/?condo,singapore,architecture,luxury,night&seed=25",
         recentTransactions: "$2.1M - $3.2M",
         targetMarket: "District 15",
     },
     {
         projectName: "Terra Hill",
         developer: "Hoi Hup Realty & Sunway Developments",
+        imageUrl: "https://source.unsplash.com/400x220/?apartment,asia,exterior,modern,dusk&seed=26",
         recentTransactions: "$1.8M - $2.9M",
         targetMarket: "District 5",
     },
     {
         projectName: "Lentor Hills Residences",
         developer: "GuocoLand, Hong Leong Holdings & TID",
+        imageUrl: "https://source.unsplash.com/400x220/?singapore,residence,building,evening,lights&seed=27",
         recentTransactions: "$1.5M - $2.5M",
         targetMarket: "District 26",
     },
     {
         projectName: "Sceneca Residence",
         developer: "MCC Land, Ekovest & The Place Holdings",
+        imageUrl: "https://source.unsplash.com/400x220/?condo,asia,architecture,sleek,night&seed=28",
         recentTransactions: "$1.3M - $2.2M",
         targetMarket: "District 16",
     },
     {
         projectName: "The Reserve Residences",
         developer: "Far East Organization & Sino Group",
+        imageUrl: "https://source.unsplash.com/400x220/?condo,singapore,exterior,luxury,dusk&seed=29",
         recentTransactions: "$1.9M - $3.5M",
         targetMarket: "District 21",
     },
     {
         projectName: "Grand Dunman",
         developer: "SingHaiyi Group",
+        imageUrl: "https://source.unsplash.com/400x220/?apartment,singapore,pool,night,lights&seed=30",
         recentTransactions: "$2.2M - $4.0M",
         targetMarket: "District 15",
     },
     {
         projectName: "Pinetree Hill",
         developer: "UOL Group & Singapore Land Group",
+        imageUrl: "https://source.unsplash.com/400x220/?residence,building,asia,green,evening&seed=31",
         recentTransactions: "$1.7M - $2.8M",
         targetMarket: "District 21",
     },
     {
         projectName: "Tembusu Grand",
         developer: "CDL & MCL Land",
+        imageUrl: "https://source.unsplash.com/400x220/?singapore,condo,exterior,night,modern&seed=32",
         recentTransactions: "$2.0M - $3.1M",
         targetMarket: "District 15",
     },
         {
         projectName: "Blossoms by the Park",
         developer: "EL Development",
+        imageUrl: "https://source.unsplash.com/400x220/?apartment,singapore,park,evening,lights&seed=33",
         recentTransactions: "$1.4M - $2.3M",
         targetMarket: "District 5",
     },
     {
         projectName: "The Myst",
         developer: "CDL",
+        imageUrl: "https://source.unsplash.com/400x220/?condo,singapore,nature,luxury,dusk&seed=34",
         recentTransactions: "$1.6M - $2.7M",
         targetMarket: "District 23",
     },
     {
         projectName: "J'den",
         developer: "CapitaLand Development",
+        imageUrl: "https://source.unsplash.com/400x220/?residential,singapore,futuristic,night&seed=35",
         recentTransactions: "$2.3M - $3.8M",
         targetMarket: "District 22",
     },
     {
         projectName: "Watten House",
         developer: "UOL Group & Singapore Land Group",
+        imageUrl: "https://source.unsplash.com/400x220/?condo,singapore,exterior,premium,evening&seed=36",
         recentTransactions: "$3.0M - $5.5M",
         targetMarket: "District 11",
     },
@@ -270,6 +315,7 @@ function displayProperties(page) {
         const card = document.createElement('property-card');
         card.setAttribute('project-name', prop.projectName);
         card.setAttribute('developer', prop.developer);
+        card.setAttribute('image-url', prop.imageUrl);
         card.setAttribute('recent-transactions', prop.recentTransactions);
         card.setAttribute('target-market', prop.targetMarket);
         newLaunchesSection.appendChild(card);

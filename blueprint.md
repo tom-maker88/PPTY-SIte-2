@@ -36,10 +36,10 @@ This document outlines the plan and features for the "Smart Property Investors: 
 ## Design and Styling
 - **Theme:** Sophisticated, luxurious, and modern dark theme with a deep navy blue and charcoal background, off-white text, and a polished gold accent.
 - **Typography:** Elegant 'Playfair Display' for headings and 'Lato' for body text.
-- **Visuals:** High-quality images, subtle animations, and a responsive layout.
+- **Visuals:** High-quality images with a sophisticated hover effect, subtle animations, and a responsive layout.
 - **Color Palette:** A refined color scheme with a gold accent color (`#BFA181`) for a premium feel.
-- **Texture:** A subtle noise texture on the background to add a tactile feel.
-- **Visual Effects:** Enhanced multi-layered drop shadows for depth and subtle interactive effects.
+- **Background:** A subtle background gradient to add depth.
+- **Visual Effects:** Enhanced multi-layered drop shadows for depth and a "glow" on interactive elements.
 
 ## Technical Implementation
 - **Frontend:** HTML, CSS, and JavaScript (ES Modules).
@@ -70,6 +70,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 19. **Image Source Correction:** Corrected the image URLs to ensure proper display.
 20. **Remove Images:** Removed images from the property cards.
 21. **Luxury Redesign:** Revamped the color scheme and typography to appeal to high-net-worth buyers.
+22. **Enhanced Visuals:** Added a background gradient, re-introduced images with a sophisticated hover effect, and added a "glow" to interactive elements.
 
 ## Project Complete
 
