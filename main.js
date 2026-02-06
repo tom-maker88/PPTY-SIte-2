@@ -13,7 +13,6 @@ class PropertyCard extends HTMLElement {
     render() {
         const projectName = this.getAttribute('project-name');
         const developer = this.getAttribute('developer');
-        const imageUrl = this.getAttribute('image-url');
         const recentTransactions = this.getAttribute('recent-transactions');
         const targetMarket = this.getAttribute('target-market');
 
@@ -29,11 +28,6 @@ class PropertyCard extends HTMLElement {
                 }
                 :host(:hover) {
                     transform: translateY(-5px);
-                }
-                .card-image img {
-                    width: 100%;
-                    height: 200px;
-                    object-fit: cover;
                 }
                 .card-content {
                     padding: 1.5rem;
@@ -82,9 +76,6 @@ class PropertyCard extends HTMLElement {
                 }
             </style>
             <div class="card">
-                <div class="card-image">
-                    <img src="${imageUrl}" alt="${projectName}">
-                </div>
                 <div class="card-content">
                     <h3>${projectName}</h3>
                     <p class="developer">by ${developer}</p>
@@ -167,84 +158,72 @@ const properties = [
     {
         projectName: "The Continuum",
         developer: "Hoi Hup Realty & Sunway Developments",
-        imageUrl: "https://source.unsplash.com/400x200/?condo,singapore,architecture,day&seed=13",
         recentTransactions: "$2.1M - $3.2M",
         targetMarket: "District 15",
     },
     {
         projectName: "Terra Hill",
         developer: "Hoi Hup Realty & Sunway Developments",
-        imageUrl: "https://source.unsplash.com/400x200/?apartment,asia,exterior,sunny&seed=14",
         recentTransactions: "$1.8M - $2.9M",
         targetMarket: "District 5",
     },
     {
         projectName: "Lentor Hills Residences",
         developer: "GuocoLand, Hong Leong Holdings & TID",
-        imageUrl: "https://source.unsplash.com/400x200/?singapore,residence,building,bright&seed=15",
         recentTransactions: "$1.5M - $2.5M",
         targetMarket: "District 26",
     },
     {
         projectName: "Sceneca Residence",
         developer: "MCC Land, Ekovest & The Place Holdings",
-        imageUrl: "https://source.unsplash.com/400x200/?condo,asia,architecture,clean&seed=16",
         recentTransactions: "$1.3M - $2.2M",
         targetMarket: "District 16",
     },
     {
         projectName: "The Reserve Residences",
         developer: "Far East Organization & Sino Group",
-        imageUrl: "https://source.unsplash.com/400x200/?condo,singapore,exterior,modern&seed=17",
         recentTransactions: "$1.9M - $3.5M",
         targetMarket: "District 21",
     },
     {
         projectName: "Grand Dunman",
         developer: "SingHaiyi Group",
-        imageUrl: "https://source.unsplash.com/400x200/?apartment,singapore,pool,luxury&seed=18",
         recentTransactions: "$2.2M - $4.0M",
         targetMarket: "District 15",
     },
     {
         projectName: "Pinetree Hill",
         developer: "UOL Group & Singapore Land Group",
-        imageUrl: "https://source.unsplash.com/400x200/?residence,building,asia,green&seed=19",
         recentTransactions: "$1.7M - $2.8M",
         targetMarket: "District 21",
     },
     {
         projectName: "Tembusu Grand",
         developer: "CDL & MCL Land",
-        imageUrl: "https://source.unsplash.com/400x200/?singapore,condo,exterior,dusk&seed=20",
         recentTransactions: "$2.0M - $3.1M",
         targetMarket: "District 15",
     },
         {
         projectName: "Blossoms by the Park",
         developer: "EL Development",
-        imageUrl: "https://source.unsplash.com/400x200/?apartment,singapore,park,modern&seed=21",
         recentTransactions: "$1.4M - $2.3M",
         targetMarket: "District 5",
     },
     {
         projectName: "The Myst",
         developer: "CDL",
-        imageUrl: "https://source.unsplash.com/400x200/?condo,singapore,nature,luxury&seed=22",
         recentTransactions: "$1.6M - $2.7M",
         targetMarket: "District 23",
     },
     {
         projectName: "J'den",
         developer: "CapitaLand Development",
-        imageUrl: "https://source.unsplash.com/400x200/?residential,singapore,futuristic&seed=23",
         recentTransactions: "$2.3M - $3.8M",
         targetMarket: "District 22",
     },
     {
         projectName: "Watten House",
         developer: "UOL Group & Singapore Land Group",
-        imageUrl: "https://source.unsplash.com/400x200/?condo,singapore,exterior,premium&seed=24",
         recentTransactions: "$3.0M - $5.5M",
         targetMarket: "District 11",
     },
@@ -291,7 +270,6 @@ function displayProperties(page) {
         const card = document.createElement('property-card');
         card.setAttribute('project-name', prop.projectName);
         card.setAttribute('developer', prop.developer);
-        card.setAttribute('image-url', prop.imageUrl);
         card.setAttribute('recent-transactions', prop.recentTransactions);
         card.setAttribute('target-market', prop.targetMarket);
         newLaunchesSection.appendChild(card);

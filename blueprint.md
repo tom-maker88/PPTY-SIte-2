@@ -10,7 +10,6 @@ This document outlines the plan and features for the "Smart Property Investors: 
 - A scrollable grid of property launch cards.
 - Each card will feature:
   - Project Name and Developer.
-  - A high-resolution, AI-generated image.
   - Summary of recent transactions.
   - Target market information.
   - A voting section ("Good Buy", "Fair Buy", "Bad Buy").
@@ -69,6 +68,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 17. **Font Change:** Changed the font of the application to Arial.
 18. **Image Update:** Updated the property images to a new set of high-quality, AI-generated images.
 19. **Image Source Correction:** Corrected the image URLs to ensure proper display.
+20. **Remove Images:** Removed images from the property cards.
 
 ## Project Complete
 
