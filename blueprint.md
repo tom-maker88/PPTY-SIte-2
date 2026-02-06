@@ -34,10 +34,10 @@ This document outlines the plan and features for the "Smart Property Investors: 
   - Singapore Government Property Portal.
 
 ## Design and Styling
-- **Theme:** Sophisticated, luxurious, and modern dark theme.
-- **Typography:** Arial, sans-serif.
+- **Theme:** Sophisticated, luxurious, and modern dark theme with a deep navy blue and charcoal background, off-white text, and a polished gold accent.
+- **Typography:** Elegant 'Playfair Display' for headings and 'Lato' for body text.
 - **Visuals:** High-quality images, subtle animations, and a responsive layout.
-- **Color Palette:** A refined color scheme with a gold accent color (`#D4AF37`) for a premium feel.
+- **Color Palette:** A refined color scheme with a gold accent color (`#BFA181`) for a premium feel.
 - **Texture:** A subtle noise texture on the background to add a tactile feel.
 - **Visual Effects:** Enhanced multi-layered drop shadows for depth and subtle interactive effects.
 
@@ -69,6 +69,7 @@ This document outlines the plan and features for the "Smart Property Investors: 
 18. **Image Update:** Updated the property images to a new set of high-quality, AI-generated images.
 19. **Image Source Correction:** Corrected the image URLs to ensure proper display.
 20. **Remove Images:** Removed images from the property cards.
+21. **Luxury Redesign:** Revamped the color scheme and typography to appeal to high-net-worth buyers.
 
 ## Project Complete
 
