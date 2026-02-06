@@ -1,14 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hello World</title>
-  <link href='/style.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Property Investors: New Launches 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore-compat.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J7JHXNFPSW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-J7JHXNFPSW');
+    </script>
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <button onclick="console.log('hello');">Press me</button>
-  <script defer type="text/javascript" src="/main.js"></script>
+    <header>
+        <h1>Smart Property Investors</h1>
+        <h2>New Launches 2026</h2>
+    </header>
+
+    <main>
+        <section id="new-launches">
+            <!-- Property cards will be dynamically inserted here -->
+        </section>
+
+        <div id="pagination-container"></div>
+
+        <section id="advertisements">
+            <h2>Featured Services</h2>
+            <div class="carousel">
+                <!-- Advertisement cards will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <section id="resources">
+            <h2>More Free Resources on Singapore Property</h2>
+            <ul>
+                <!-- Resource links will be dynamically inserted here -->
+            </ul>
+        </section>
+    </main>
+
+    <div id="resale-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Resale Prices</h2>
+            <div id="resale-table-container"></div>
+        </div>
+    </div>
+
+
+    <script src="main.js" type="module"></script>
 </body>
 </html>
